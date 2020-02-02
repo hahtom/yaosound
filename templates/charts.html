@@ -1,0 +1,347 @@
+{% extends 'template.html' %}
+{% block content%}
+
+
+					<div class="row">
+							<div class="col-xl-12" >
+									<div class="breadcrumb-holder">
+											<h1 class="main-title float-left">Charts1</h1>
+											<ol class="breadcrumb float-right">
+												<li class="breadcrumb-item">Home</li>
+												<li class="breadcrumb-item active">Charts</li>
+											</ol>
+											<div class="clearfix"></div>
+                                          <div class="card-body" style="float: left; width: 30%">
+
+								<label for="example1">
+								Select country:
+								</label>
+								<select class="form-control select2" id="example1" name="state">
+									<option value="AR">Argentina</option>
+									<option value="AU">Australia</option>
+									<option value="AT">Austria</option>
+									<option value="BD">Bangladesh</option>
+									<option value="BE">Belgium</option>
+									<option value="BR">Brazil</option>
+									<option value="BG">Bulgaria</option>
+									<option value="CA">Canada</option>
+									<option value="CN">China</option>
+									<option value="CO">Colombia</option>
+									<option value="HR">Croatia</option>
+									<option value="CU">Cuba</option>
+									<option value="CZ">Czech Republic</option>
+									<option value="DK">Denmark</option>
+									<option value="EG">Egypt</option>
+									<option value="FI">Finland</option>
+									<option value="FR">France</option>
+									<option value="DE">Germany</option>
+									<option value="GR">Greece</option>
+									<option value="HK">Hong Kong</option>
+									<option value="HU">Hungary</option>
+									<option value="IS">Iceland</option>
+									<option value="IN">India</option>
+									<option value="ID">Indonesia</option>
+									<option value="IE">Ireland</option>
+									<option value="IL">Israel</option>
+									<option value="IT">Italy</option>
+									<option value="JP">Japan</option>
+									<option value="KW">Kuwait</option>
+									<option value="MX">Mexico</option>
+									<option value="NL">Netherlands</option>
+									<option value="NZ">New Zealand</option>
+									<option value="NO">Norway</option>
+									<option value="PK">Pakistan</option>
+									<option value="PL">Poland</option>
+									<option value="PT">Portugal</option>
+									<option value="RO">Romania</option>
+									<option value="RU">Russian Federation</option>
+									<option value="ES">Spain</option>
+									<option value="SE">Sweden</option>
+									<option value="TR">Turkey</option>
+									<option value="GB">United Kingdom</option>
+									<option value="US">United States</option>
+								</select>
+
+							</div>
+                                          <div class="card-body" style="float: left; width: 30%">
+
+								<label for="example1">
+								Select machine:
+								</label>
+								<select class="form-control select2" id="example1" name="state">
+									<option value="AR">TH-168</option>
+									<option value="AU">Australia</option>
+									<option value="AT">Austria</option>
+									<option value="BD">Bangladesh</option>
+									<option value="BE">Belgium</option>
+									<option value="BR">Brazil</option>
+									<option value="BG">Bulgaria</option>
+									<option value="CA">Canada</option>
+									<option value="CN">China</option>
+									<option value="CO">Colombia</option>
+									<option value="HR">Croatia</option>
+									<option value="CU">Cuba</option>
+									<option value="CZ">Czech Republic</option>
+									<option value="DK">Denmark</option>
+									<option value="EG">Egypt</option>
+									<option value="FI">Finland</option>
+									<option value="FR">France</option>
+									<option value="DE">Germany</option>
+									<option value="GR">Greece</option>
+									<option value="HK">Hong Kong</option>
+									<option value="HU">Hungary</option>
+									<option value="IS">Iceland</option>
+									<option value="IN">India</option>
+									<option value="ID">Indonesia</option>
+									<option value="IE">Ireland</option>
+									<option value="IL">Israel</option>
+									<option value="IT">Italy</option>
+									<option value="JP">Japan</option>
+									<option value="KW">Kuwait</option>
+									<option value="MX">Mexico</option>
+									<option value="NL">Netherlands</option>
+									<option value="NZ">New Zealand</option>
+									<option value="NO">Norway</option>
+									<option value="PK">Pakistan</option>
+									<option value="PL">Poland</option>
+									<option value="PT">Portugal</option>
+									<option value="RO">Romania</option>
+									<option value="RU">Russian Federation</option>
+									<option value="ES">Spain</option>
+									<option value="SE">Sweden</option>
+									<option value="TR">Turkey</option>
+									<option value="GB">United Kingdom</option>
+									<option value="US">United States</option>
+								</select>
+
+							</div>
+									</div>
+							</div>
+					</div>
+					<!-- end row -->
+
+
+					<div class="row" >
+
+							<div class="col-xs-12 " style="max-width: 100%; width: 75%">
+								<div class="card mb-3" >
+									<div class="card-header">
+										<i class="fa fa-table"></i> Combo Bar Line Chart
+									</div>
+
+									<div class="card-body" >
+										<canvas id="comboBarLineChart"></canvas>
+									</div>
+									<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+								</div><!-- end card-->
+							</div>
+
+					</div>
+
+                <div class="row" >
+
+							<div class="col-xs-12 " style="max-width: 100%; width: 75%">
+								<div class="card mb-3" >
+									<div class="card-header">
+										<i class="fa fa-table"></i> Bar Chart
+									</div>
+
+									<div class="card-body">
+										<canvas id="barChart"></canvas>
+									</div>
+									<div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+								</div><!-- end card-->
+							</div>
+
+
+
+					</div>
+
+
+{% endblock %}
+
+{% block contentScript %}
+<script>
+
+        // barChart
+	var ctx1 = document.getElementById("barChart").getContext('2d');
+	var barChart = new Chart(ctx1, {
+		type: 'bar',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+				label: 'Amount received',
+				data: [0.12, 0.19, 0.3, 0.5, 0.10, 0.5, 0.13, 0.17, 0.11, 0.28, 0.11, 0.19],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)',
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)',
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+	// comboBarLineChart
+	var ctx2 = document.getElementById("comboBarLineChart").getContext('2d');
+	var comboBarLineChart = new Chart(ctx2, {
+		type: 'line',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+					type: 'line',
+					label: 'selected time range ',
+					borderColor: '#484c4f',
+					borderWidth: 3,
+					fill: false,
+					data: [0.12, 0.19, 0.3, 0.35, 0.32, 0.3, 0.23, 0.17, 0.11, 0.18, 0.11, 0.19],
+				}, {
+					type: 'line',
+					label: 'selected time range ',
+					backgroundColor: '#FF6B8A',
+					borderWidth: 3,
+					fill: false,
+					data: [0.13, 0.22, 0.35, 0.41, 0.36, 0.33, 0.27, 0.19, 0.12, 0.20, 0.13, 0.19],
+				}],
+				borderWidth: 1
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+
+
+	</script>
+{% endblock %}
+<script>
+
+        // barChart
+	var ctx1 = document.getElementById("barChart").getContext('2d');
+	var barChart = new Chart(ctx1, {
+		type: 'bar',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+				label: 'Amount received',
+				data: [0.12, 0.19, 0.3, 0.5, 0.10, 0.5, 0.13, 0.17, 0.11, 0.28, 0.11, 0.19],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)',
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)',
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+	// comboBarLineChart
+	var ctx2 = document.getElementById("comboBarLineChart").getContext('2d');
+	var comboBarLineChart = new Chart(ctx2, {
+		type: 'line',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+					type: 'line',
+					label: 'selected time range ',
+					borderColor: '#484c4f',
+					borderWidth: 3,
+					fill: false,
+					data: [0.12, 0.19, 0.3, 0.35, 0.32, 0.3, 0.23, 0.17, 0.11, 0.18, 0.11, 0.19],
+				}, {
+					type: 'line',
+					label: 'selected time range ',
+					backgroundColor: '#FF6B8A',
+					borderWidth: 3,
+					fill: false,
+					data: [0.13, 0.22, 0.35, 0.41, 0.36, 0.33, 0.27, 0.19, 0.12, 0.20, 0.13, 0.19],
+				}],
+				borderWidth: 1
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+
+
+	</script>
+
+
+

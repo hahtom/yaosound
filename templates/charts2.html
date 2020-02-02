@@ -1,0 +1,443 @@
+{% extends 'template.html' %}
+{% block content%}
+
+	                <div class="row">
+							<div class="col-xl-12" >
+									<div class="breadcrumb-holder">
+											<h1 class="main-title float-left">Charts</h1>
+											<ol class="breadcrumb float-right">
+												<li class="breadcrumb-item">Home</li>
+												<li class="breadcrumb-item active">Charts</li>
+											</ol>
+											<div class="clearfix"></div>
+
+									</div>
+							</div>
+					</div>
+					<!-- end row -->
+
+
+
+                <div class="row" >
+                            <div class="col-xs-12 ">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                 <h1 class="card-title" style="float: left">Frankfurt</h1>
+                                            </div>
+
+                                            <div class="row" >
+                                                <div class="card-body" >
+                                                    <div>
+                                                        <h1 class="header-title" style="text-align: center"><b>Availability</b></h1>
+                                                        <h1 class="header-title" style="text-align: center">Last 24 Hours</h1>
+                                                    </div >
+                                                    <canvas id="doughnutChart"></canvas>
+                                                </div>
+                                                <div class="card-body"  style="width: 700px">
+                                                    <div>
+                                                        <h1 class="header-title" style="text-align: center"><b>Availability Trend</b></h1>
+                                                        <h1 class="header-title" style="text-align: center">Last 7 Days</h1>
+                                                    </div >
+                                                    <canvas id="lineChart"></canvas>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-footer small text-muted"></div>
+                                        </div><!-- end card-->
+                                    </div>
+
+
+
+
+                    </div>
+
+
+					<div class="row">
+							<div class="col-xl-12" >
+									<div class="breadcrumb-holder">
+											<h1 class="main-title float-left">Charts</h1>
+											<ol class="breadcrumb float-right">
+												<li class="breadcrumb-item">Home</li>
+												<li class="breadcrumb-item active">Charts</li>
+											</ol>
+											<div class="clearfix"></div>
+									</div>
+							</div>
+					</div>
+					<!-- end row -->
+
+                 <div class="row" >
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                <i class="fa fa-table"></i> Doughnut Chart
+                                            </div>
+
+                                            <div class="card-body">
+                                                <canvas id="doughnutChart2"></canvas>
+                                            </div>
+                                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                        </div><!-- end card-->
+                                    </div>
+
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+										<div class="card mb-3">
+											<div class="card-header">
+												<h3><i class="fa fa-star-o"></i> Tasks progress</h3>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											</div>
+
+											<div class="card-body">
+												<p class="font-600 m-b-5">Task 1 <span class="text-primary pull-right"><b>95%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 2 <span class="text-primary pull-right"><b>88%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="88"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 3 <span class="text-info pull-right"><b>75%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-info" role="progressbar" style="width: 78%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 4 <span class="text-info pull-right"><b>70%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 5 <span class="text-warning pull-right"><b>68%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="68"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 6 <span class="text-warning pull-right"><b>65%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="65"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 7 <span class="text-danger pull-right"><b>55%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 8 <span class="text-danger pull-right"><b>40%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+												</div>
+											</div>
+											<div class="card-footer small text-muted">Updated today at 11:59 PM</div>
+										</div><!-- end card-->
+									</div>
+                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                                        <div class="card mb-3">
+                                            <div class="card-header">
+                                                <i class="fa fa-table"></i> Doughnut Chart
+                                            </div>
+
+                                            <div class="card-body">
+                                                <canvas id="doughnutChart3"></canvas>
+                                            </div>
+                                            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                        </div><!-- end card-->
+                                    </div>
+
+                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
+										<div class="card mb-3">
+											<div class="card-header">
+												<h3><i class="fa fa-star-o"></i> Tasks progress</h3>
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											</div>
+
+											<div class="card-body">
+												<p class="font-600 m-b-5">Task 1 <span class="text-primary pull-right"><b>95%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 2 <span class="text-primary pull-right"><b>88%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-primary" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="88"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 3 <span class="text-info pull-right"><b>75%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-info" role="progressbar" style="width: 78%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 4 <span class="text-info pull-right"><b>70%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 5 <span class="text-warning pull-right"><b>68%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="68"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 6 <span class="text-warning pull-right"><b>65%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="65"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 7 <span class="text-danger pull-right"><b>55%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="55"></div>
+												</div>
+
+												<div class="m-b-20"></div>
+
+												<p class="font-600 m-b-5">Task 8 <span class="text-danger pull-right"><b>40%</b></span></p>
+												<div class="progress">
+												<div class="progress-bar progress-bar-striped progress-xs bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
+												</div>
+											</div>
+											<div class="card-footer small text-muted">Updated today at 11:59 PM</div>
+										</div><!-- end card-->
+									</div>
+
+
+
+
+
+                    </div>
+
+
+
+
+
+{% endblock %}
+
+{% block contentScript %}
+	<script>
+
+
+	// doughnutChart
+	var ctx1 = document.getElementById("doughnutChart").getContext('2d');
+	var doughnutChart = new Chart(ctx1, {
+		type: 'doughnut',
+		data: {
+				datasets: [{
+					data: [12, 38],
+					backgroundColor: [
+						'rgba(255,99,132,1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					"Red",
+					"Blue"
+				]
+			},
+			options: {
+				responsive: true
+			}
+
+	});
+
+
+	var ctx2 = document.getElementById("lineChart").getContext('2d');
+	var lineChart = new Chart(ctx2, {
+		type: 'bar',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+					label: 'Dataset 1',
+					backgroundColor: '#3EB9DC',
+					data: [10, 14, 6, 7, 13, 9, 13, 16, 11, 8, 12, 9]
+				}, {
+					label: 'Dataset 2',
+					backgroundColor: '#EBEFF3',
+					data: [-12, -14, -6, -7, -13, -6, -13, -16, -10, -8, -11, -12]
+				}]
+
+		},
+		options: {
+						tooltips: {
+							mode: 'index',
+							intersect: false
+						},
+						responsive: true,
+						scales: {
+							xAxes: [{
+								stacked: true,
+							}],
+							yAxes: [{
+								stacked: true
+							}]
+						}
+					}
+	});
+
+
+	// doughnutChart2
+	var ctx3 = document.getElementById("doughnutChart2").getContext('2d');
+	var doughnutChart = new Chart(ctx3, {
+		type: 'doughnut',
+		data: {
+				datasets: [{
+					data: [12, 38],
+					backgroundColor: [
+						'rgba(255,99,132,1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					"Red",
+					"Blue"
+				]
+			},
+			options: {
+				responsive: true
+			}
+
+	});
+
+	// doughnutChart3
+	var ctx4 = document.getElementById("doughnutChart3").getContext('2d');
+	var doughnutChart = new Chart(ctx4, {
+		type: 'doughnut',
+		data: {
+				datasets: [{
+					data: [12, 38],
+					backgroundColor: [
+						'rgba(255,99,132,1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					"Red",
+					"Blue"
+				]
+			},
+			options: {
+				responsive: true
+			}
+
+	});
+	</script>
+{% endblock %}
+<script>
+
+        // barChart
+	var ctx1 = document.getElementById("barChart").getContext('2d');
+	var barChart = new Chart(ctx1, {
+		type: 'bar',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+				label: 'Amount received',
+				data: [0.12, 0.19, 0.3, 0.5, 0.10, 0.5, 0.13, 0.17, 0.11, 0.28, 0.11, 0.19],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)',
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)',
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+	// comboBarLineChart
+	var ctx2 = document.getElementById("comboBarLineChart").getContext('2d');
+	var comboBarLineChart = new Chart(ctx2, {
+		type: 'line',
+		data: {
+			labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			datasets: [{
+					type: 'line',
+					label: 'selected time range ',
+					borderColor: '#484c4f',
+					borderWidth: 3,
+					fill: false,
+					data: [0.12, 0.19, 0.3, 0.35, 0.32, 0.3, 0.23, 0.17, 0.11, 0.18, 0.11, 0.19],
+				}, {
+					type: 'line',
+					label: 'selected time range ',
+					backgroundColor: '#FF6B8A',
+					borderWidth: 3,
+					fill: false,
+					data: [0.13, 0.22, 0.35, 0.41, 0.36, 0.33, 0.27, 0.19, 0.12, 0.20, 0.13, 0.19],
+				}],
+				borderWidth: 1
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+
+
+
+	</script>
+
+
+
